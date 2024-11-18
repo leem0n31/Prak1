@@ -204,21 +204,22 @@ internal class Program
         Console.ReadKey();
     }
     static void task4()
-    {
-        Console.Clear();
-        Console.WriteLine("4. Разработайте программу, которая позволяет определить имя файла (с расширением) по введенному пути");
-        Console.Write("Введите путь к файлу: "); string path = Console.ReadLine();
-        if (File.Exists(path))
-        {
-            string fileName = Path.GetFileName(path); Console.WriteLine($"Имя файла: {fileName}");
-        }
-        else
-        {
-            Console.WriteLine("Файл не найден.");
-        }
-        Console.WriteLine("Задача завершена, нажмите на любую клавишу, чтобы вернуться к списку задач.");
-        Console.ReadKey();
-    }
+ {
+     Console.Clear(); 
+     Console.WriteLine("4. Разработайте программу, которая позволяет определить имя файла (с расширением) по введенному пути");
+     Console.Write("Введите путь к файлу: ");
+     string path = Console.ReadLine();
+     if (File.Exists(path))
+     {
+         string fileName = Path.GetFileName(path); Console.WriteLine($"Имя файла: {fileName}");
+     }
+     else
+     {
+         throw new FileNotFoundException("Файл не найден.");
+     }
+     Console.WriteLine("Задача завершена, нажмите на любую клавишу, чтобы вернуться к списку задач");
+     Console.ReadKey();
+ }
     static void task5()
     {
         Console.Clear();
